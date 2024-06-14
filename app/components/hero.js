@@ -1,9 +1,10 @@
 "use client"
 
 import React, { useState } from 'react'
-import { FiLink } from "react-icons/fi";
-import { FaArrowRight } from "react-icons/fa6";
+import Lottie from 'lottie-react';
 import { FiUser } from "react-icons/fi";
+
+import animationData from '@/animations/arrow2.json'
 
 const Hero = ({methods}) => {
 
@@ -14,7 +15,7 @@ const Hero = ({methods}) => {
         methods.getUser(userName)
     }
   return (
-    <section  className="flex flex-col gap-4 bg-slate-100 p-4 rounded-lg hrh py-8 gradient-border hero3">
+    <section id='hero'  className="flex flex-col gap-4 bg-slate-100 p-4 rounded-lg hrh py-8 gradient-border hero3">
       <div className="flex flex-row gap-6 justify-center items-center ">
         <div>
           <img src="/icons/video.png" className="w-12"></img>
@@ -23,6 +24,9 @@ const Hero = ({methods}) => {
           <h1 className="text-2xl font-bold gradient">Get free tiktok folowers</h1>
           <h2 className="text-md font-semibold ">Instant 1k followers</h2>
         </div>
+
+        <Lottie className='w-210' animationData={animationData} loop={true} />
+
       </div>
       {/* {fonction.isError && <Alert message={fonction.errormessage}></Alert>} */}
 

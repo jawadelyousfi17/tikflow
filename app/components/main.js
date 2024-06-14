@@ -9,6 +9,7 @@ import ErrorM from "./error";
 import Followers from "./followers";
 import Confirm from "./confirm";
 import Navbar from "./navbar";
+import TopLanding from "./landing-page/top";
 
 
 
@@ -39,10 +40,20 @@ const [globalData , setGlobalData] = useState({
     } , [userData])
 
   const getUser = async (username) => {
+
     setStep2(false)
     setLoading(true)
     setReady(false)
     setError(false)
+
+
+    if(!username || username.includes(' ')) {
+      setError(true)
+      setLoading(false)
+      setErrorMessage('Invalid username. ')
+      return
+    }
+
     // fetch the api
     const options = {
       method: "GET",
@@ -89,11 +100,11 @@ const [globalData , setGlobalData] = useState({
   return (
     <>
     <Navbar uri={userData.avatar}></Navbar>     
-    <div className="mt-20">
-     <Hero methods={{ getUser , loading }} className="" />
-    </div>
+    
 
-    <div className="p-4 space-y-4  md:w-1/2 md:mx-auto">
+    <div className="p-4 space-y-4  md:w-1/2 md:mx-auto pt-20"> 
+    <TopLanding/>
+     <Hero methods={{ getUser , loading }} className="" />
      { ready &&  <UserCard data={{userData , setStep2}} />}
      {!ready && loading && <SkeletonUser/>}
      {step2 && ready && <Followers data={{setStep3 , globalData , setGlobalData}}/>}
@@ -101,7 +112,6 @@ const [globalData , setGlobalData] = useState({
     {step3 && ready && <Confirm data={{globalData}} />}
     <div className="h-svh"></div>
     </div>
-    
     </>
   );
 };

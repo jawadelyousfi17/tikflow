@@ -7,15 +7,19 @@ import { AiFillDollarCircle } from "react-icons/ai";
 import { FaDollarSign } from "react-icons/fa6";
 import { FiLink } from "react-icons/fi";
 import { MdAlternateEmail } from "react-icons/md";
+import Lottie from 'lottie-react';
+
+import CheckAnimation from '@/animations/check.json'
 
 const Confirm = ({data}) => {
     const [loading  , setloading ]=  useState(false)
+    const [play , setPlay] = useState(false)
     const sectionRef = useRef(null);
 
 function confirm() {
     setloading(true)
     console.log(data.globalData)
-    setTimeout(()=> {document.getElementById('my_modal_5').showModal()} , 3000) 
+    setTimeout(()=> {document.getElementById('my_modal_5').showModal() ; setPlay(true)} , 0) 
 }
 
 const [email , setEmail] = useState('')
@@ -90,7 +94,10 @@ useEffect(()=> {
 {/* Open the modal using document.getElementById('ID').showModal() method */}
 <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle rounded-none ">
   <div className="modal-box rounded-none">
-    <div className="flex gap-4  items-center">  <img src="/icons/check.png" className="w-12"></img>   <h3 className="font-bold text-lg gradient1">Just on more step !</h3>
+    <div className="flex gap-4  items-center"> 
+    <Lottie className='w-20' animationData={CheckAnimation} autoPlay={play} loop={false} />
+
+      <h3 className="font-bold text-lg gradient1">Just on more step !</h3>
    </div>
 
     <p className="py-4 font-medium">
