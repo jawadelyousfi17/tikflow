@@ -9,7 +9,7 @@ import Lottie from 'lottie-react';
 import AlertAnimation from '@/animations/user.json'
 import GrowAnimation from '@/animations/bt.json'
 
-import { IoIosStar } from "react-icons/io";
+import Rating from '../srv/ratings';
 
 
 const TopLanding = () => {
@@ -101,44 +101,8 @@ const TopLanding = () => {
                         What they say about us
                     </p>
 
-                    <div className='flex gap-4 justify-center items-center mt-8'>
-                        <div className="avatar-group -space-x-6 rtl:space-x-reverse">
-                            <div className="avatar">
-                                <div className="w-12">
-                                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                                </div>
-                            </div>
-                            <div className="avatar">
-                                <div className="w-12">
-                                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                                </div>
-                            </div>
-                            <div className="avatar">
-                                <div className="w-12">
-                                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                                </div>
-                            </div>
-                            <div className="avatar">
-                                <div className="w-12">
-                                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                                </div>
+                   <Rating/>
 
-                            </div>
-                        </div>
-                        <div className='flex flex-col justify-center font-medium '>
-                            50,250 Happy user
-                           <div className='flex gap-1 items-center'> 4.9
-                    <IoIosStar />
-                    <IoIosStar />
-                    <IoIosStar />
-                    <IoIosStar />
-                    <IoIosStar />
-                   
-                    </div>  
-                        </div>
-                   
-                    </div>
-                    
 
 
                     <Lottie className='w-20 mt-4' animationData={GrowAnimation} loop={true} />
