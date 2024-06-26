@@ -15,7 +15,9 @@ const Hero = ({methods}) => {
         methods.getUser(userName)
     }
   return (
-    <section id='hero'  className="flex flex-col gap-4 bg-slate-100 p-4 rounded-lg hrh py-8 gradient-border hero3">
+    <section className=''>
+
+    <div id='hero'  className="flex flex-col gap-4 bg-slate-100 p-4 rounded-lg hrh py-8 gradient-border hero3">
       <div className="flex flex-row gap-6 justify-center items-center ">
         <div>
           <img src="/icons/video.png" className="w-12"></img>
@@ -48,12 +50,13 @@ const Hero = ({methods}) => {
           </button> */}
         </div>
         
-        <button disabled={methods.loading} onClick={handleSubmit} className="btn btn-accent w-full md:w-auto bg-gradient rounded-sm h-8">
+        <button disabled={methods.loading} onClick={handleSubmit} className="btn btn-accent w-full md:w-auto bg-gradient rounded-xl h-8">
             Check
             {methods.loading && <span className="loading loading-spinner loading-md"></span>
             }
         </button>
       </div>
+    </div>
     </section>
   )
 }

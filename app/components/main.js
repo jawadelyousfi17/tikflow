@@ -62,7 +62,7 @@ const [globalData , setGlobalData] = useState({
         unique_id: username,
       },
       headers: {
-        "x-rapidapi-key": "763cf1c4b9msh06c005a3b61ac0ap1158e4jsn4a236ac9db52",
+        'x-rapidapi-key': '2bd5372d1amshfdfc5d0d770623dp1c8bb4jsn1048a81cbff5',
         "x-rapidapi-host": "tiktok-scraper7.p.rapidapi.com",
       },
     };

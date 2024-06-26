@@ -28,7 +28,7 @@ const TopLanding = () => {
                     <h2 className='text-md font-medium ' >
                         Boost you Tiktok account for free
                     </h2>
-                    <button className='btn mybtn mt-4'>GET STARTED</button>
+                    <a href='#gohere' className='btn mybtn mt-4'>GET STARTED</a>
 
                     <p className='mt-8 font-semibold text-lg btom'>
                         Why choose Us ?
@@ -101,7 +101,8 @@ const TopLanding = () => {
                         What they say about us
                     </p>
 
-                   <Rating/>
+                   <Rating  />
+                   <div id='gohere'></div>
 
 
 

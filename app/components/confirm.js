@@ -19,7 +19,7 @@ const Confirm = ({data}) => {
 function confirm() {
     setloading(true)
     console.log(data.globalData)
-    setTimeout(()=> {document.getElementById('my_modal_5').showModal() ; setPlay(true)} , 0) 
+    setTimeout(()=> {document.getElementById('my_modal_5').showModal() ; setPlay(true) , setloading(false) } , 3000) 
 }
 
 const [email , setEmail] = useState('')
@@ -83,9 +83,11 @@ useEffect(()=> {
 
       <div className='flex flex-row z-10 justify-end gap-8 items-center pt-4 divid pr '>
       <p className='text-medium font-semibold'> </p>
-      <button  disabled={false} onClick={confirm} className='btn mybtn px-8'>
+      <button  disabled={loading} onClick={confirm} className='btn mybtn px-8'>
         {loading && <span className="loading loading-spinner loading-md"></span>}
-        Confirm <FaCheck /></button>
+        Confirm <FaCheck />
+        
+        </button>
     </div>
 
 
