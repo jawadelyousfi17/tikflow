@@ -24,7 +24,7 @@ const Hero = ({methods}) => {
         </div>
         <div>
           <h1 className="text-2xl font-bold gradient">Get free tiktok folowers</h1>
-          <h2 className="text-md font-semibold ">Instant 1k followers</h2>
+          <h2 className="text-md font-semibold ">Instant followers</h2>
         </div>
 
         <Lottie className='w-210' animationData={animationData} loop={true} />

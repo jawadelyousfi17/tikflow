@@ -5,6 +5,9 @@ import { FaArrowRight } from "react-icons/fa6";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { FaDollarSign } from "react-icons/fa6";
 
+
+const hasF = [5, 10, 50, 100, 500];
+
 const Followers = ({data}) => {
     const sectionRef = useRef(null);
 
@@ -18,7 +21,7 @@ const Followers = ({data}) => {
 
   const confirm = () => {
     data.setStep3(true)
-    data.setGlobalData(old => ({...old , nof : value * 20 + 500}))
+    data.setGlobalData(old => ({...old , nof :hasF[value / 25]}))
     if (sectionRef.current) {
       const yOffset = -80; // Offset in pixels
       const yPosition = sectionRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
@@ -34,7 +37,11 @@ const Followers = ({data}) => {
     <div     ref={sectionRef}
     className="space-y-4 bg-slate-50 p-4 rounded-md  gradient-border">
       <p className="text-lg font-semibold">How many followers you want ?</p>
-      <div className="flex gap-2 items-center">
+      <div className="flex justify-center gap-2 items-center">
+        {" "}
+        <FaRegUser /> <strong className=" text-lg">{hasF[value / 25]}K</strong> Followers
+      </div>
+      {/* <div className="flex gap-2 items-center">
         {" "}
         <FaRegUser /> <strong>{value * 20 + 500}</strong> Followers
       </div>
@@ -48,7 +55,7 @@ const Followers = ({data}) => {
         <IoTimeSharp />
         <strong>{ tim }</strong> Minutes
       </div>
-
+ */}
 
       <input
         type="range"
@@ -58,22 +65,23 @@ const Followers = ({data}) => {
         step="25"
         value={value}
         onChange={handleChange}
+        color="danger"
       />
       <div className="w-full flex justify-between text-xs px-2">
         <div className="flex flex-col">
-          <p className="text-lg">500</p>Followers
+          <p className="text-lg">5k</p>Followers
         </div>
         <div className="flex flex-col">
-          <p className="text-lg">1000</p>Followers
+          <p className="text-lg">10k</p>Followers
         </div>
         <div className="flex flex-col">
-          <p className="text-lg">1500</p>Followers
+          <p className="text-lg">50k</p>Followers
         </div>
         <div className="flex flex-col">
-          <p className="text-lg">2000</p>Followers
+          <p className="text-lg">100k</p>Followers
         </div>
         <div className="flex flex-col">
-          <p className="text-lg">2500</p>Followers
+          <p className="text-lg">500k</p>Followers
         </div>
       </div>
         <div className='flex flex-row z-10 justify-end gap-8 items-center pt-4 divid '>

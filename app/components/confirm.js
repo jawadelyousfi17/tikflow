@@ -54,9 +54,9 @@ useEffect(()=> {
         </div>
 <div className="flex gap-2 items-center">
         {" "}
-        <FaRegUser /> <strong>{value * 20 + 500}</strong> Followers
+        <FaRegUser /> <strong className="text-lg"> + {value * 20 + 500}K</strong> Followers
       </div>
-      <div className="flex gap-2 items-center">
+      {/* <div className="flex gap-2 items-center">
         {" "}
         <AiFillDollarCircle  />
         <p className=" font-semibold"> {value<50 ? ('Free | 1 time per user') : value/4 } </p>   {value>=50 && <FaDollarSign />}
@@ -65,7 +65,7 @@ useEffect(()=> {
         {" "}
         <IoTimeSharp />
         <strong>{ tim }</strong> Minutes
-      </div>    
+      </div>     */}
 
 <div className="space-y-2"> <p className="font-medium">Your email adress</p>
       <div className=" flex items-center gap-2 px-0 pl-4 w-full rounded-sm my-input h-12 md:h-12">

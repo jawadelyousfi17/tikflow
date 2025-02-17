@@ -30,7 +30,7 @@ const TopLanding = () => {
                     </h2>
                     <a href='#gohere' className='btn mybtn mt-4'>GET STARTED</a>
 
-                    <p className='mt-8 font-semibold text-lg btom'>
+                    {/* <p className='mt-8 font-semibold text-lg btom'>
                         Why choose Us ?
                     </p>
 
@@ -95,7 +95,7 @@ const TopLanding = () => {
                                 Watch your account grow
                             </p>
                         </div>
-                    </div>
+                    </div> */}
 
                     <p className='mt-8 font-semibold text-lg btom'>
                         What they say about us

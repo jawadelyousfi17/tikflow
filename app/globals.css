@@ -29,8 +29,7 @@
 }
 
 .mynav {
-  background: rgb(251, 73, 181);
-  background: rgba(255, 255, 255, 0.696);
+  background: rgb(255, 255, 255);
   border: none;
   color: black;
   position: fixed;
@@ -44,8 +43,7 @@
 }
 
 .scrolled {
-  border-bottom: 1px solid rgb(228, 228, 228);
- 
+  background: rgba(237, 73, 73, 0.696); 
 }
 
 .mynav .links {
